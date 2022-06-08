@@ -1,3 +1,5 @@
+const { linearSearch, target, arr } = require("./linear-search");
+
 describe("identifyTargetNumber", () => {
   it("should expect index of 1 if target is 50 and this is array [8, 50, 7, -6, -2] ", () => {
     const arr = [8, 50, 7, -6, -2];
@@ -15,11 +17,9 @@ describe("identifyTargetNumber", () => {
   it("should return -1 when given the array [] and a target of 0", () => {
     const arr = [];
     const target = 0;
-    const actual = identifyTargetNumber(arr, target);
+    const actual = linearSearch(arr, target);
 
-    const result = linearSearch(arr, target);
-
-    expect(result).toEqual(-1);
+    expect(actual).toEqual(-1);
   });
   it("should return -1 when given the array [] and a target of 0", function () {
     const arr = [];
